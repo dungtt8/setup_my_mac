@@ -35,6 +35,7 @@ chmod +x *.sh
 **CLI Tools:**
 - `awscli` - AWS Command Line Interface
 - `aws-vault` - AWS credential vault
+- `ansible` - IT automation
 - `tfenv` - Terraform version manager
 - `terraform` - Infrastructure as code
 - `trivy` - Security scanner
@@ -45,9 +46,13 @@ chmod +x *.sh
 - `lazygit` - Git TUI
 - `lazydocker` - Docker TUI
 - `gh` - GitHub CLI
+- `glab` - GitLab CLI
+- `ankitpokhrel/jira-cli/jira-cli` - Jira CLI
 - `gitleaks` - Secrets scanner
 - `act` - Run GitHub Actions locally
 - `tree` - Directory tree viewer
+- `tesseract` - OCR engine
+- `uv` - Fast Python package manager
 - `yarn` - Package manager
 - `digdag` - Workflow engine
 - `sbt` - Scala build tool
@@ -102,11 +107,24 @@ chmod +x *.sh
 - `visual-studio-code` - Code editor
 - `slack` - Team communication
 - `brave-browser` - Privacy-focused browser
+- `claude` - Anthropic Claude desktop app
 - `intellij-idea` - Java IDE
 - `windows-app` - Windows virtualization
 - `evkey` - Vietnamese keyboard (Telex/VNI)
 - `openkey` - Vietnamese keyboard (open source)
+- `copilot-cli` - GitHub Copilot CLI
 - `snowflake-snowsql` - Snowflake CLI
+
+### 🔁 `migration/export_manifest.sh` + `migration/apply_manifest.sh` - Migrate máy cũ -> máy mới
+- Export danh sách package: Homebrew formula/cask, npm global, pyenv versions, nvm versions
+- Export cấu hình: `.gitconfig`, `.zshrc`, `.zprofile`, `.ssh/*`
+- Export thêm cấu hình môi trường: `~/.aws`, `~/.config/gcloud`, `~/.docker`, `~/.config/github-copilot`
+- Export VS Code User: `settings.json`, `keybindings.json`, `mcp.json`, `snippets`, `prompts`
+- Export danh sách VS Code Extensions (`code --list-extensions`)
+- Export `.vscode` của workspace hiện tại (nếu có)
+- Apply tự động trên máy mới với backup file cũ trước khi ghi đè
+- Hỗ trợ bật/tắt từng nhóm qua biến `EXPORT_*` và `APPLY_*`
+- Hỗ trợ tuỳ chọn export private SSH key qua biến `INCLUDE_PRIVATE_KEYS=true`
 
 ---
 

@@ -26,6 +26,7 @@ cask_apps=(
 cli_tools=(
   awscli
   aws-vault
+  ansible
   tfenv
   terraform
   trivy
@@ -36,9 +37,13 @@ cli_tools=(
   lazygit
   lazydocker
   gh
+  glab
+  ankitpokhrel/jira-cli/jira-cli
   gitleaks
   act
   tree
+  tesseract
+  uv
   yarn
   digdag
   sbt
